@@ -1,0 +1,25 @@
+<script type="text/javascript">
+	function oblicz(){
+	
+	var kilometry = document.getElementById("pozazg").value;
+	var koszt = kilometry*2;
+	
+		if(document.getElementById("zg").checked==true){
+			document.getElementById("wynik").innerHTML = "Dowieziemy Twoją pizzę za darmo";
+		}
+		else if(document.getElementById("zg").checked==false){
+			document.getElementById("wynik").innerHTML = "Dowóz będzie Cię kosztował "+koszt+ " złotych";
+		}
+		
+	}
+</script>
+
+
+<h1>Oblicz koszt dostawy</h1>
+
+
+<input type="checkbox" id="zg"> Jestem z Zielonej Góry<br><br>
+albo<br><br>
+Podaj liczbę kilometrów od Zielonej Góry: <input type="number" id="pozazg"> <br>
+<input type="submit" onclick="oblicz()" value="Oblicz">
+<p id="wynik"></p>
